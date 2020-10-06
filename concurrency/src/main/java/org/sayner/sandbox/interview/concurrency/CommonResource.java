@@ -1,4 +1,4 @@
-package org.sayner.sandbox.interview.concurrency.synch;
+package org.sayner.sandbox.interview.concurrency;
 
 public class CommonResource {
     private Integer x;

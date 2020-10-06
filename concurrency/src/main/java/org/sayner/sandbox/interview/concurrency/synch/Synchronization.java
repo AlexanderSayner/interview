@@ -1,7 +1,6 @@
-package org.sayner.sandbox.interview.concurrency;
+package org.sayner.sandbox.interview.concurrency.synch;
 
-import org.sayner.sandbox.interview.concurrency.synch.CommonResource;
-import org.sayner.sandbox.interview.concurrency.synch.CountThread;
+import org.sayner.sandbox.interview.concurrency.CommonResource;
 import org.sayner.sandbox.interview.library.Logger;
 import org.sayner.sandbox.interview.library.SampleI;
 
@@ -20,7 +19,7 @@ public class Synchronization implements SampleI {
     public void runExample() {
             for (int i = 1; i < 6; i++) {
                 Thread t = new Thread(new CountThread(loggers.get(i - 1), commonResource));
-                t.setName("Thread-" + i);
+                t.setName("Synchronization-" + i);
                 t.start();
             }
     }

@@ -1,6 +1,8 @@
 package org.sayner.sandbox.interview.core;
 
-import org.sayner.sandbox.interview.concurrency.Synchronization;
+import org.sayner.sandbox.interview.concurrency.locks.ReentrantLockProgram;
+import org.sayner.sandbox.interview.concurrency.synch.Synchronization;
+import org.sayner.sandbox.interview.concurrency.waiting.Waiting;
 import org.sayner.sandbox.interview.core.sample.*;
 import org.sayner.sandbox.interview.library.Resources;
 import org.sayner.sandbox.interview.library.SampleI;
@@ -36,6 +38,16 @@ public class Application {
                         new LibraryLogger(LoggerFactory.getLogger("ConcurrencyLogger-" + Resources.getCounter())),
                         new LibraryLogger(LoggerFactory.getLogger("ConcurrencyLogger-" + Resources.getCounter())),
                         new LibraryLogger(LoggerFactory.getLogger("ConcurrencyLogger-" + Resources.getCounter()))
+                ),
+                new Waiting(
+                        new LibraryLogger(LoggerFactory.getLogger("WaitingLogger"))
+                ),
+                new ReentrantLockProgram(
+                        new LibraryLogger(LoggerFactory.getLogger("ReentrantLockProgram-" + Resources.getCounter())),
+                        new LibraryLogger(LoggerFactory.getLogger("ReentrantLockProgram-" + Resources.getCounter())),
+                        new LibraryLogger(LoggerFactory.getLogger("ReentrantLockProgram-" + Resources.getCounter())),
+                        new LibraryLogger(LoggerFactory.getLogger("ReentrantLockProgram-" + Resources.getCounter())),
+                        new LibraryLogger(LoggerFactory.getLogger("ReentrantLockProgram-" + Resources.getCounter()))
                 )
         );
     }

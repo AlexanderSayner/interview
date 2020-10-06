@@ -1,7 +1,7 @@
 package org.sayner.sandbox.interview.library;
 
 public class Resources {
-    private static Integer counter=1;
+    private static Integer counter = 1;
 
     protected Resources() {
     }

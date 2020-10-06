@@ -1,5 +1,6 @@
 package org.sayner.sandbox.interview.concurrency.synch;
 
+import org.sayner.sandbox.interview.concurrency.CommonResource;
 import org.sayner.sandbox.interview.library.Logger;
 
 public class CountThread implements Runnable {
